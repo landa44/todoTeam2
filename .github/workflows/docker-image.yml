@@ -25,6 +25,41 @@ jobs:
         compose-file: "./docker-compose.yml"
         up-flags: "--remove-orphans"
         down-flags: "--remove-orphans"
+        services: |
+          website
+          db_migrate
+  
+  test:
+#     runs-on: ubuntu-latest
+
+# #     steps:
+# #     - uses: actions/checkout@v3
+# #     - name: Build the Docker image
+# #       run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+
+#     steps:
+#     # need checkout before using compose-action
+#     - uses: actions/checkout@v3
+#     - uses: isbang/compose-action@v1.4.1
+#       with:
+#         compose-file: "./docker-compose.yml"
+#         up-flags: "--remove-orphans"
 #         services: |
-#           helloworld2
-#           helloworld3
+#           unit_test
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python 3.8
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.8
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r ./superlists/requirements.txt
+    - name: Run migrations
+      run: python superlists/manage.py migrate
+    - name: Run tests
+      run: python superlists/manage.py test ./superlists
