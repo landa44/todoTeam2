@@ -35,4 +35,4 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    command: python superlists/manage.py tests ./superlists
+    command: python superlists/manage.py test ./superlists
