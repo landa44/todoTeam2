@@ -62,4 +62,4 @@ jobs:
     - name: Run migrations
       run: python superlists/manage.py migrate
     - name: Run tests
-      run: python superlists/manage.py test
+      run: python superlists/manage.py test ./superlists
