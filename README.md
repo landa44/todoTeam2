@@ -66,6 +66,8 @@
   - Amazon RDS (Relational Databse System)
   - Amazon EBS (Elastic Bean Stalk)
   - Amazon EC2 (Elastic Compute Cloud)
+<!--TODO add/rm tools? -->
+- SOME SORT OF AUTHENTICATION TOOL, I ASSUME
 - [Visual Studio Code](https://code.visualstudio.com/)
 - [GitHub Actions](https://github.com/features/actions)
 - [Docker](https://www.docker.com/)
