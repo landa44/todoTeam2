@@ -30,3 +30,9 @@ services:
       context: .
       dockerfile: Dockerfile
     command: python superlists/manage.py migrate
+
+  unit_test:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: python superlists/manage.py tests ./superlists
