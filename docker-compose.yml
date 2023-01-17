@@ -1,4 +1,4 @@
-version: "3.7"
+version: "3"
 
 x-services-volumes: &service-volumes
   - ./:/app/:rw,cached
@@ -16,23 +16,23 @@ services:
   website:
     build:
       context: .
-      dockerfile: Dockerfile
-    command: python superlists/manage.py runserver 0.0.0.0:8000
+      dockerfile: superlists/Dockerfile
+    command: python superlists/manage.py runserver 0.0.0.0:80
     volumes: *service-volumes
     environment: *app-variables
     depends_on:
       - db_migrate
     ports:
-      - "8000:8000"
+      - "80:80"
 
   db_migrate:
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: superlists/Dockerfile
     command: python superlists/manage.py migrate
 
-  unit_test:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    command: python superlists/manage.py test ./superlists
+  # unit_test:
+  #   build:
+  #     context: .
+  #     dockerfile: Dockerfile
+  #   command: python superlists/manage.py test ./superlists

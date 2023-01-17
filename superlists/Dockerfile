@@ -21,11 +21,11 @@ RUN apt-get update && \
     postgresql \
     libpq-dev
 
-COPY superlists/requirements.txt ./requirements.txt
+COPY ./superlists/requirements.txt ./requirements.txt
 RUN pip install -r ./requirements.txt
 
 
-COPY superlists ./superlists
-COPY static ./static
+COPY ./superlists ./superlists
+COPY ./static ./static
 
-EXPOSE 8000
+EXPOSE 80
