@@ -35,6 +35,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps: 
+    - uses: actions/checkout@v3
     - name: Generate Deployment Package
       run: zip -r deploy.zip . *
     
