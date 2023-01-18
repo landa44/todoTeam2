@@ -4,13 +4,14 @@ x-services-volumes: &service-volumes
   - ./:/app/:rw,cached
 
 x-database-variables: &database-variables
-  POSTGRES_DB: postgres
+  POSTGRES_DB: tododb
   POSTGRES_USER: postgres
-  POSTGRES_PASSWORD: postgres
+  POSTGRES_PASSWORD: password
 
 x-app-variables: &app-variables
   <<: *database-variables
-  POSTGRES_HOST: postgres
+  POSTGRES_HOST: todoteam2.clkytqfsslik.us-east-1.rds.amazonaws.com
+  DB_ENGINE: django.db.backends.postgresql_psycopg2
 
 services:
   website:
@@ -30,6 +31,7 @@ services:
       context: .
       dockerfile: superlists/Dockerfile
     command: python superlists/manage.py migrate
+    environment: *app-variables
 
   # unit_test:
   #   build:
