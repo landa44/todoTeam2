@@ -48,7 +48,7 @@
 
 ## About The Project
 <div align="center">
-<a href="https://youtu.be/quidVtpB9sk"><img src="Diagrams/Cryptek-front-page.png" alt="Click for YouTube Demo!" style="width: 800px"></a>
+<a><img src="Diagrams/Cryptek-front-page.png" alt="d" style="width: 800px"></a>
 
 </div>
 <p>The Pear Timer is a prodcutivity app for developers looking to organize their tasks and work smart. Pear Timer brings together tons of research-backed features that will boost your productivity: a pomododoro timer, custimizable todo list, and more--all inside a dashboard unique to your account. Take charge of your productivity and join Pear Timer today!</p>
@@ -88,3 +88,16 @@
 <!-- FEATURES -->
 
 ## Features
+
+
+## Architecture Diagram
+### Development and Operations Tool Kit
+<img src="Diagrams/Architecture_diagram_devops_tools.png" alt="Our Dev Ops tools" style="width:300px">
+</a>
+<p>This diagram outlines the toolkit our dev team used in every stage of the development process.</p>
+
+### Application Network Architecture
+<img src="Diagrams/Architecture_diagram_network_architecture.png" alt="Our Network Architecture" style="width:300px">
+</a>
+<p>This diagram shows the network architecture of our application. The Pear Timer application is compiled and built automatically and deployed to a docker container through Amazon Elastic Beanstalk</p>
+
