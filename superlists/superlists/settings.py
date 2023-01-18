@@ -83,23 +83,39 @@ WSGI_APPLICATION = 'superlists.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
-POSTGRES_HOST = 'todoteam2.clkytqfsslik.us-east-1.rds.amazonaws.com'
-POSTGRES_DB = 'tododb'
-POSTGRES_USER = 'postgres'
-POSTGRES_PASSWORD = 'password'
+# POSTGRES_HOST = 'todoteam2.clkytqfsslik.us-east-1.rds.amazonaws.com'
+# POSTGRES_DB = 'tododb'
+# POSTGRES_USER = 'postgres'
+# POSTGRES_PASSWORD = 'password'
+
+
+# DATABASES = {
+#     "default": {
+#         "ENGINE": "django.db.backends.postgresql_psycopg2",
+#         "NAME": POSTGRES_DB,
+#         "USER": POSTGRES_USER,
+#         "PASSWORD": POSTGRES_PASSWORD,
+#         "HOST": POSTGRES_HOST,
+#         "PORT": 5432,
+#     }
+# }\
+DB_ENGINE = os.environ.get("DB_ENGINE", default="django.db.backends.sqlite3")
+POSTGRES_HOST = os.environ.get("POSTGRES_HOST", default="")
+NAME_DB = os.environ.get("POSTGRES_DB", default= os.path.join(BASE_DIR, "./db.sqlite3"))
+POSTGRES_USER = os.environ.get("POSTGRES_USER", default="")
+POSTGRES_PASSWORD = os.environ.get("POSTGRES_PASSWORD", default="")
 
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.postgresql_psycopg2",
-        "NAME": POSTGRES_DB,
+        "ENGINE": DB_ENGINE,
+        "NAME": NAME_DB,
         "USER": POSTGRES_USER,
         "PASSWORD": POSTGRES_PASSWORD,
         "HOST": POSTGRES_HOST,
         "PORT": 5432,
     }
 }
-
 
 
 # Password validation
