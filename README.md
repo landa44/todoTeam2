@@ -6,9 +6,9 @@
 <img src="Diagrams/glass-half-full-stack.png" alt="Glass half-full stack Logo" style="width:300px">
 </a>
 
-<h3 align="center">Cryptek</h3>
+<h3 align="center">Pear Timer</h3>
 
-  <p align="center">Cryptocurrency monitoring made easy.
+  <p align="center">Take charge of your productivity.
     <br />
     <!-- TODO: add link to github repo -->
     <a href="https://github.com/"><strong>Explore the docs »</strong></a>
