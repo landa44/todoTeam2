@@ -140,6 +140,13 @@ class NewListViewIntegratedTest(TestCase):
     expected_error = escape("You can't have an empty list item")
     self.assertContains(response, expected_error)
 
+  def post_invalid_input(self):
+    list_ = List.objects.create()
+    return self.client.post(
+      f'/lists/',
+      data={'text': ''}
+    )
+
   def test_invalid_input_means_nothing_saved_to_db(self):
     self.post_invalid_input()
     self.assertEqual(List.objects.all().count(), 0)
