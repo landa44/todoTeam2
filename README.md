@@ -116,7 +116,7 @@
 ## Acknowledgements
 
 ## Authors
-- Ady Cummins ((ad-800)[https://github.com/ad-800])
+- Addy Cummins ((ad-800)[https://github.com/ad-800])
 - Bradley Goldsmith ([goldsmithb](github.com/goldsmithb))
 - Mohammed Mansour ([Mohammed-blue]https://github.com/Mohammed-blue)
 - Pablo Landa ([landa44](https://github.com/landa44))
