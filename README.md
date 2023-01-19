@@ -2,12 +2,12 @@
 <br />
 
 <!-- TODO: Update screenshot as frontend changes -->
-<div align="center">
-<img src="diagrams/website_screenshot.png" alt="Screen shot of website" style="width:750px">
-</div>
 
 <h2 align="center">Pear Timer</h3>
-
+<div>
+  <div align="center">
+    <img src="diagrams/website_screenshot.png" alt="Screen shot of website" style="width:750px" />
+	</div>
   <p align="center">Take charge of your productivity.
     <br />
     <a href="https://github.com/landa44/todoTeam2"><strong>Explore the docs »</strong></a>
