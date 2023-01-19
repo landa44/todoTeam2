@@ -24,7 +24,6 @@
 <!-- TABLE OF CONTENTS -->
 
 ## Table of Contents
-
   <ol>
     <li>
       <a href="#about-the-project">About The Project</a>
@@ -64,7 +63,7 @@
   - Amazon EBS (Elastic Bean Stalk)
   - Amazon EC2 (Elastic Compute Cloud)
 <!--TODO add/rm tools? -->
-- SOME SORT OF AUTHENTICATION TOOL, I ASSUME
+- SOME SORT OF AUTHENTICATION TOOL, I ASSUME (TODO)
 - [Visual Studio Code](https://code.visualstudio.com/)
 - [GitHub Actions](https://github.com/features/actions)
 - [Docker](https://www.docker.com/)
@@ -86,9 +85,8 @@
 
 ## Features
 
-
 ## Architecture Diagram
-### Development and Operations Tool Kit
+### Development and Operations (DevOps) Tool Kit
 <div align="center">
 <img src="diagrams/Architecture_diagram_devops_tools.png" alt="Our Dev Ops tools" style="width:700px">
 </div>
@@ -99,11 +97,27 @@
 <div align="center">
 <img src="diagrams/Architecture_diagram_pipeline.png" alt="Our CI/CD Pipeline" style="width:900px">
 </div>
-<p>This diagram shows the network architecture of our application. The Pear Timer application is compiled and built automatically and deployed to a docker container through Amazon Elastic Beanstalk</p>
+<p>This diagram shows the CI/CD Pipeline for our application. Code development occurs on developers' local machines and is pushed to our central repository. GitHub Actions achieve continous integration by automating the building, testing, and docker initialization. Finally, GitHub Actions deploys the compiled application to Elastic Beanstalk, which allocates and configures our infrastructure and production environment, hosting our application.</p>
 
 
 ### Application Network Architecture
 <div align="center">
 <img src="diagrams/Architecture_diagram_network.png" alt="Our Network Architecture" style="width:900px">
 </div>
-<p>This diagram shows the network architecture of our application. The Pear Timer application is compiled and built automatically and deployed to a docker container through Amazon Elastic Beanstalk</p>
+<p>This diagram shows the network architecture of our application. The network shown is the state of the production environment after deployment by Amazon Elastic Beanstalk.</p>
+<p>Instances of the containerized application are hosted on Amazon EC2 instances (essentially AWS virtual machines). These web servers are in the same security group and subnet in one of our Virtual Private Clouds (VPC). Because these resources are grouped together, they are essentially in their own private network, which has a route to an Internet Gateway (I.G.), providing the VPC with access to the public internet.</p>
+<p>Similarly, our database was created with AWS as well. We created a Postgresql database with AWS Relational Database Service (RDS) hosted on the cloud. It is in a private subnet and security group, but this subnet has a route to an Internet Gateway, which makes the database publicly available.</p>
+<p>With this architecture, our application, Database, and end-users all communicate with eachother through the public internet. Elastic Beanstalk will scale infrastructure up and down as needed as well as perform load balancing automatically.</p>
+
+## Local Installation
+### Demo
+
+
+## Acknowledgements
+
+## Authors
+<!-- TODO: add your github accounts if you wants -->
+- Ady Cummins (gh)
+- Bradley Goldsmith ([goldsmithb](github.com/goldsmithb))
+- Mohammed Mansour (gh)
+- Pablo Landa (gh)
