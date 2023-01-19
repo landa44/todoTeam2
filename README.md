@@ -2,7 +2,7 @@
 <br />
 <div align="center">
 
-<img src="diagrams/XXXX" alt="Screen shot of website" style="width:300px">
+<img src="diagrams/website_screenshot" alt="Screen shot of website" style="width:300px">
 
 <h2 align="center">Pear Timer</h3>
 
