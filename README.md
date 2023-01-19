@@ -1,23 +1,22 @@
 <!-- PROJECT LOGO -->
 <br />
-<div align="center">
 
-<img src="diagrams/website_screenshot.png" alt="Screen shot of website" style="width:300px">
+<!-- TODO: Update screenshot as frontend changes -->
+<div align="center">
+<img src="diagrams/website_screenshot.png" alt="Screen shot of website" style="width:750px">
+</div>
 
 <h2 align="center">Pear Timer</h3>
 
   <p align="center">Take charge of your productivity.
     <br />
-    <!-- TODO: add link to github repo -->
     <a href="https://github.com/landa44/todoTeam2"><strong>Explore the docs »</strong></a>
     <br />
     <br />
     <a href="http://todoteam2app-env.eba-77m4zjcb.us-east-1.elasticbeanstalk.com">View Demo</a>
     ·
-    <!-- TODO: add link to github repo issues-->
     <a href="https://github.com/landa44/todoTeam2/issues">Report Bug</a>
     ·
-    <!-- TODO: add link to github repo issues-->
     <a href="https://github.com/landa44/todoTeam2/issues">Request Feature</a>
   </p>
 </div>
