@@ -114,6 +114,13 @@
 
 
 ## Acknowledgements
+### Previous Versions
+This repo represents the final iteration of the Pear Timer application, but it is the culmination of various demos that used different design patterns and deployment strategies. To see our previous iteration, [click here](https://github.com/ad-800/glasshalffullstack-application). Here is an overview:
+- Java backend API
+- Node.js/React frontend
+- mySQL database on mySQL
+- Containerized by Docker
+- Deployed with Heroku
 
 ## Authors
 - Addy Cummins ([ad-800](https://github.com/ad-800))
