@@ -4,6 +4,7 @@ import time
 from django.test import LiveServerTestCase
 from django.contrib.staticfiles.testing import StaticLiveServerTestCase
 from selenium.common.exceptions import WebDriverException
+from selenium.webdriver.firefox.options import Options
 import os
 from unittest import skip
 from .server_tools import reset_database
@@ -11,7 +12,9 @@ from .server_tools import reset_database
 MAX_WAIT = 10
 class FunctionalTest(StaticLiveServerTestCase):
   def setUp(self):
-    self.browser = webdriver.Firefox()
+    self.firefox_options = Options()
+    self.firefox_options.add_argument("--headless")
+    self.browser = webdriver.Firefox(options=self.firefox_options)
     self.staging_server = os.environ.get("STAGING_SERVER")
     if self.staging_server:
       self.live_server_url = "http://" + self.staging_server
